@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>my.node - Wifi Settings - LuCI</title>
+  <!--[if lt IE 9]><script src="/luci-static/bootstrap/html5.js"></script><![endif]-->
+  <meta name="viewport" content="initial-scale=1.0">
+  <link rel="stylesheet" href="files/cascade.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 854px)" href="files/mobile.css" type="text/css">
+  <link rel="shortcut icon" href="http://my.node/luci-static/bootstrap/favicon.ico">
+  <script src="files/xhr.js"></script>
+ </head>
+
+ <body class="lang_enWifi Settings">
+  <header>
+   <div class="fill">
+    <div class="container">
+     <a class="brand" href="#">my.node</a>
+     <ul class="nav">
+        <li class="dropdown">
+            <a class="menu" href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/index">General</a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/index/logout">Logout</a></li>
+	</ul>
+        </li>
+	
+        <li class="dropdown">
+            <a class="menu" href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/network">Network</a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/network/wifi">Wifi Settings</a></li>
+	  <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/network/sharing">Bandwith Sharing</a></li>
+	</ul>
+        </li>
+	
+        <li class="dropdown">
+            <a class="menu" href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/system">System</a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/system/admin">Admin Password</a></li>
+	  <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/system/reboot">Reboot</a></li>
+	</ul>
+        </li>
+	
+	</ul>
+
+	
+    </div>
+   </div>
+  </header><div id="maincontent" class="container">
+
+
+
+<form method="post" name="cbi" action="/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/network/wifi" enctype="multipart/form-data" onreset="return cbi_validate_reset(this)" onsubmit="return cbi_validate_form(this, 'Some fields are invalid, cannot save values!')">
+	<div>
+		<script type="text/javascript" src="files/cbi.js"></script>
+		<input name="cbi.submit" value="1" type="hidden">
+		<input value="Save" class="hidden" type="submit">
+	</div>
+<div class="cbi-map" id="cbi-wireless">
+	<h2><a id="content" name="content">Wireless</a></h2>
+	<fieldset class="cbi-section" id="cbi-wireless-wifi-iface">
+	<legend>Wireless Interface</legend>
+	<div class="cbi-section-descr"></div>
+	<h3>CFG073579</h3>
+
+		
+
+		<fieldset class="cbi-section-node" id="cbi-wireless-cfg073579">
+			
+
+
+	<div class="cbi-value" id="cbi-wireless-cfg073579-encryption"><label class="cbi-value-title" for="cbid.wireless.cfg073579.encryption">Encryption</label>
+		<div class="cbi-value-field">
+
+
+	<select class="cbi-input-select" onchange="cbi_d_update(this.id)" id="cbid.wireless.cfg073579.encryption" name="cbid.wireless.cfg073579.encryption" size="1">
+	<option id="cbi-wireless-cfg073579-encryption-none" value="none">none</option><option id="cbi-wireless-cfg073579-encryption-psk2" value="psk2" selected="selected">psk2</option><option id="cbi-wireless-cfg073579-encryption-psk" value="psk">psk</option>
+	</select>
+
+		</div></div>
+
+
+
+
+<div class="cbi-value" id="cbi-wireless-cfg073579-key"><label class="cbi-value-title" for="cbid.wireless.cfg073579.key">key</label>
+		<div class="cbi-value-field">
+
+	<input class="cbi-input-text" onchange="cbi_d_update(this.id)" name="cbid.wireless.cfg073579.key" id="cbid.wireless.cfg073579.key" value="1ukYftWPw0MEFZ" type="text">
+	
+			<br>
+			<div class="cbi-value-description">
+				<span class="cbi-value-helpicon"><img src="files/help.gif" alt="help"></span>
+				Your Wifi Password
+			</div></div></div>
+
+
+
+
+<div class="cbi-value cbi-value-last" id="cbi-wireless-cfg073579-ssid"><label class="cbi-value-title" for="cbid.wireless.cfg073579.ssid">ssid</label>
+		<div class="cbi-value-field">
+
+	<input class="cbi-input-text" onchange="cbi_d_update(this.id)" name="cbid.wireless.cfg073579.ssid" id="cbid.wireless.cfg073579.ssid" value="circleplate3" type="text">
+	
+			<br>
+			<div class="cbi-value-description">
+				<span class="cbi-value-helpicon"><img src="files/help.gif" alt="help"></span>
+				Your Wifi Name
+			</div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+		</fieldset>
+		<br>
+
+	
+
+	
+</fieldset>
+	<br>
+</div><div class="cbi-page-actions">
+		
+
+		
+		
+		
+			<input class="cbi-button cbi-button-save" value="Save" type="submit">
+		
+		
+			<input class="cbi-button cbi-button-reset" value="Reset" type="reset">
+		
+
+		<script type="text/javascript">cbi_d_update();</script>
+	</div></form>
+
+   <footer><a href="http://luci.subsignal.org/">Powered by LuCI Trunk (svn-r9951)</a>
+
+    OpenWrt Attitude Adjustment 12.09.1
+
+    
+     <ul class="breadcrumb pull-right" id="modemenu">
+	    
+		    <li class="active"><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/">Peoples Wifi</a> <span class="divider">|</span></li>
+	    
+		    <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/admin/">Administration</a> <span class="divider">|</span></li>
+	    
+     </ul>
+    
+   </footer>
+   </div>
+  
+ 
+
+
+
+</body></html>

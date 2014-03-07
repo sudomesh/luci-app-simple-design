@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>my.node - Bandwith Sharing - LuCI</title>
+  <!--[if lt IE 9]><script src="/luci-static/bootstrap/html5.js"></script><![endif]-->
+  <meta name="viewport" content="initial-scale=1.0">
+  <link rel="stylesheet" href="files/cascade.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 854px)" href="files/mobile.css" type="text/css">
+  <link rel="shortcut icon" href="http://my.node/luci-static/bootstrap/favicon.ico">
+  <script src="files/xhr.js"></script>
+ </head>
+
+ <body class="lang_enBandwith Sharing">
+  <header>
+   <div class="fill">
+    <div class="container">
+     <a class="brand" href="#">my.node</a>
+     <ul class="nav">
+        <li class="dropdown">
+            <a class="menu" href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/index">General</a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/index/logout">Logout</a></li>
+	</ul>
+        </li>
+	
+        <li class="dropdown">
+            <a class="menu" href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/network">Network</a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/network/wifi">Wifi Settings</a></li>
+	  <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/network/sharing">Bandwith Sharing</a></li>
+	</ul>
+        </li>
+	
+        <li class="dropdown">
+            <a class="menu" href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/system">System</a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/system/admin">Admin Password</a></li>
+	  <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/system/reboot">Reboot</a></li>
+	</ul>
+        </li>
+	
+	</ul>
+
+	
+    </div>
+   </div>
+  </header><div id="maincontent" class="container">
+
+
+
+<form method="post" name="cbi" action="/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/network/sharing" enctype="multipart/form-data" onreset="return cbi_validate_reset(this)" onsubmit="return cbi_validate_form(this, 'Some fields are invalid, cannot save values!')">
+	<div>
+		<script type="text/javascript" src="files/cbi.js"></script>
+		<input name="cbi.submit" value="1" type="hidden">
+		<input value="Save" class="hidden" type="submit">
+	</div>
+<div class="cbi-map" id="cbi-batman-adv">
+	<h2><a id="content" name="content">Sharing</a></h2>
+	<div class="cbi-map-descr">Choose how much bandwith to share</div>
+	<fieldset class="cbi-section" id="cbi-batman-adv-bat0">
+		
+		
+		
+		
+		<div class="cbi-section-node" id="cbi-batman-adv-bat0">
+			
+
+
+	<div class="cbi-value cbi-value-last" id="cbi-batman-adv-bat0-gw_mode"><label class="cbi-value-title" for="cbid.batman-adv.bat0.gw_mode">Amount</label>
+		<div class="cbi-value-field">
+
+
+	<select class="cbi-input-select" onchange="cbi_d_update(this.id)" id="cbid.batman-adv.bat0.gw_mode" name="cbid.batman-adv.bat0.gw_mode" size="1">
+	<option selected="selected" id="cbi-batman-adv-bat0-gw_mode-server 1mbit/256kbit" value="server 1mbit/256kbit">1mbit down - 256kbit up</option><option id="cbi-batman-adv-bat0-gw_mode-server 5mbit/1mbit" value="server 5mbit/1mbit">5mbit down - 1mbit up</option><option id="cbi-batman-adv-bat0-gw_mode-server 10mbit/5mbit" value="server 10mbit/5mbit">10mbit down - 5mbit up</option><option id="cbi-batman-adv-bat0-gw_mode-server 20mbit/10mbit" value="server 20mbit/10mbit">20mbit down - 10mbit up</option><option id="cbi-batman-adv-bat0-gw_mode-server 30mbit/10mbit" value="server 30mbit/10mbit">30mbit down - 10mbit up</option><option id="cbi-batman-adv-bat0-gw_mode-server 40mbit/20mbit" value="server 40mbit/20mbit">40mbit down - 20mbit up</option><option id="cbi-batman-adv-bat0-gw_mode-server 1gbit/50mbit" value="server 1gbit/50mbit">1gbit down - 50mbit up</option><option id="cbi-batman-adv-bat0-gw_mode-client" value="client">No Sharing</option>
+	</select>
+
+		</div></div>
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+		<br>
+	</fieldset>
+
+<!-- /nsection -->
+
+	<br>
+</div><div class="cbi-page-actions">
+		
+
+		
+		
+		
+			<input class="cbi-button cbi-button-save" value="Save" type="submit">
+		
+		
+			<input class="cbi-button cbi-button-reset" value="Reset" type="reset">
+		
+
+		<script type="text/javascript">cbi_d_update();</script>
+	</div></form>
+
+   <footer><a href="http://luci.subsignal.org/">Powered by LuCI Trunk (svn-r9951)</a>
+
+    OpenWrt Attitude Adjustment 12.09.1
+
+    
+     <ul class="breadcrumb pull-right" id="modemenu">
+	    
+		    <li class="active"><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/peopleswifi/">Peoples Wifi</a> <span class="divider">|</span></li>
+	    
+		    <li><a href="http://my.node/cgi-bin/luci/;stok=3bbe85e00067d118c81899f9fbc3b015/admin/">Administration</a> <span class="divider">|</span></li>
+	    
+     </ul>
+    
+   </footer>
+   </div>
+  
+ 
+
+
+
+</body></html>
